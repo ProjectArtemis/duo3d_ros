@@ -1,9 +1,9 @@
 <launch>
-    <arg name="exposure" default="50" />
-    <arg name="gain" default="100" />
-    <arg name="FPS" default="20" />
+    <arg name="exposure" default="80" />
+    <arg name="gain" default="10" />
+    <arg name="FPS" default="40" />
     <arg name="imu_rate" default="200" />    
-    <arg name="resolution_width" default="640" />
+    <arg name="resolution_width" default="752" />
     <arg name="resolution_height" default="480" />
     <arg name="publish_raw" default="1" />
 
@@ -49,9 +49,9 @@
 	    <param name="use_DUO_imu"   	value="true" />
 	    <param name="use_DUO_LEDs"   	value="true" />
 
-	    <param name="VerticalFlip"   	value="false" />
-	    <param name="HorizontalFlip"   	value="false" />
-	    <param name="CameraSwap"     	value="true" />
+	    <param name="VerticalFlip"   	value="true" />
+	    <param name="HorizontalFlip"   	value="true" />
+	    <param name="CameraSwap"     	value="false" />
 	    
 	    <param name="publish_raw" type="bool" value="$(arg publish_raw)" />
 
@@ -66,27 +66,6 @@
 		<param name="auto_exposure_recompute_frequency"   value="$(arg auto_exposure_recompute_frequency)" />
 		<param name="auto_exposure_transition_frequency"   value="$(arg auto_exposure_transition_frequency)" />
 		<param name="auto_exposure_max_step_size"   value="$(arg auto_exposure_max_step_size)" />
-
-<!--okvis ?-->
-		<!--remap from="/duo3d_camera/left/image_raw" to="/cam0/image_raw" />
-    	<remap from="/duo3d_camera/right/image_raw" to="/cam1/image_raw" />
-    	<remap from="/calibration0" to="/cam0/calibration" />
-    	<remap from="/calibration1" to="/cam1/calibration" />
-    	<remap from="/duo3d_camera/cam_imu" to="/imu0" /-->
-
-<!--rovio-->
-		<!--remap from="/duo3d_camera/left/image_raw" to="/cam0/image_raw" />
-    	<remap from="/duo3d_camera/right/image_raw" to="/cam1/image_raw" />
-    	<remap from="/calibration0" to="/cam0/calibration" />
-    	<remap from="/calibration1" to="/cam1/calibration" />
-    	<remap from="/duo3d_camera/cam_imu" to="/imu0" /-->
-
-<!--rcars-->
-		<remap from="/duo3d_camera/left/image_raw" to="/cam0/image_raw" />
-    	<remap from="/duo3d_camera/right/image_raw" to="/cam1/image_raw" />
-    	<remap from="/calibration0" to="/cam0/calibration" />
-    	<remap from="/calibration1" to="/cam1/calibration" />
-    	<remap from="/duo3d_camera/cam_imu" to="/imu0" />
 
     </node>
 
